@@ -1,0 +1,51 @@
+.btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 4px 15px;
+    font-weight: 700;
+    font-size: .8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    &.btn--label {
+        background-color: white;
+        border: 0;
+        padding: 4px 10px 4px 30px;
+        font-weight: 500;
+        font-size: .9rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::before {
+            content: "\e907";
+            position: absolute;
+            transform: translateY(-50%);
+            top: 60%;
+            left: 10px;
+            font-family: "photogallery";
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &.btn--gray {
+        border-color: var(--gray-100);
+        background-color: var(--gray-100);
+        opacity: .5;
+    }
+    &.btn-orange {
+        background-color: var(--orange-100);
+        color: white;
+    }
+    &.btn--border-blue {
+        border-color: var(--blue-100);
+    }
+    &.btn--green {
+        background-color: var(--green-100);
+        border-color: var(--green-100);
+    }
+}
+.fake-btn {
+    width: 160px;
+}

@@ -1,0 +1,39 @@
+.searchBarWrapper {
+  margin: 2rem 0 3rem;
+  .searchBarInput {
+    position: relative;
+    display: inline-block;
+    .reset {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 2.7rem;
+      background-color: transparent;
+      box-shadow: none;
+      border: 0;
+      color: var(--orange-100);
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    &::before {
+      content: "\e903";
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      right: 1rem;
+      width: 20px;
+      height: 20px;
+      font-family: "photogallery";
+    }
+  }
+  input {
+    font-size: 1rem;
+    min-width: 300px;
+    width: 30vw;
+    box-shadow: 0px 0px 1px 1px #a3a3a3;
+    border: 0;
+  }
+}

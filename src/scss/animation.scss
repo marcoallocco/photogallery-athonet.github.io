@@ -1,0 +1,20 @@
+.animate {
+    animation-duration: 1.5s; 
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+    animation-fill-mode: backwards;
+    &.slide { animation-name: animate-slide; }
+   
+}
+
+  
+@keyframes animate-slide {
+0% {
+opacity: .5;
+transform: translate(0,30px);
+}
+100% {
+    opacity: 1;
+    transform: translate(0,0);
+}
+}

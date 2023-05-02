@@ -1,0 +1,14 @@
+.content {
+  margin-top: 160px;
+  min-height: calc(100vh - 280px);
+  background: white;
+  padding: 2rem 0;
+  @media screen and (max-width: 700px) {
+    margin-top: 120px;
+    padding: 1rem 0 2rem;
+    min-height: calc(100vh - 240px);
+  }
+  h1 {
+    color: black;
+  }
+}

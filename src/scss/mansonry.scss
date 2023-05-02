@@ -1,0 +1,109 @@
+.image-grid {
+    --auto-grid-min-size: 20rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 3rem 2rem;
+    @include medium {
+      --auto-grid-min-size: 15rem;
+    }
+    @include small {
+      --auto-grid-min-size: 15rem;
+      grid-gap: 2rem 2rem;
+    }
+    .image-item {
+        position: relative;
+        overflow: hidden;
+        height: 40vh;
+        max-height: 350px;
+        display: flex;
+        flex-direction: column;
+        
+        &:hover {
+          
+        }
+      img {
+        display: block;
+        transition: all 0.8s;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: auto;
+        border-radius: 15px;
+        position: relative;
+        z-index: 2;
+        cursor: zoom-in;
+        &:hover {
+            & + .meta-bar {
+                opacity: 1;
+                top: 0;
+            }
+        }
+      }
+      .meta-bar {
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+        top: 150%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        color: white;
+        border-radius: 15px;
+        border-radius: 15px;
+        display: flex;
+        z-index: 3;
+        opacity: 0;
+        @include small {
+          display: none !important;
+        }
+        &:hover {
+            opacity: 1;
+            top: 0;
+            cursor: zoom-in;
+        }
+        p {
+            margin: auto 0 0;
+            font-size: .9rem;
+        }
+      }
+      span {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.5rem;
+        background: white;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1px solid black;
+        z-index: 4;
+        transition: all 0.2s ease-in-out;
+        &.icon-heart-solid {
+          color: var(--orange-100);
+        }
+        &:hover {
+            font-size: 1.3rem;
+            & ~ .meta-bar {
+                //opacity: 1;
+                //top: 0;
+            }
+        }
+      }
+      &:hover{
+        img{
+          opacity:1;
+        }
+      }
+    }
+  
+  }
+  
+  @media ( max-width : 860px ){
+     
+  }
+  @media ( max-width : 667px ){
+    
+  }

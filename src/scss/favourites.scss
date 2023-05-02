@@ -1,0 +1,44 @@
+.filter-bar {
+    display: flex;
+    margin: 2rem 0 3rem;
+    align-items: center;
+    @include small {
+        margin: 0 0 2rem;
+      }
+    & > div {
+        max-width: 700px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    span {
+        margin-right: .5rem;
+        font-size: .8rem;
+    }
+    .fav-filter-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-width: 90vw;
+        flex-wrap: wrap;
+        .fav-filter-item {
+            margin: .5rem .3rem;
+            &.active {
+                button {
+                    font-weight: 700;
+                    color: var(--orange-100);
+                    &.btn--label {
+                        &::before {
+                            content: "\e906";
+                        }
+                    }
+                }    
+            }
+            button {
+                
+                white-space: nowrap;
+
+            }
+        }
+    }
+}

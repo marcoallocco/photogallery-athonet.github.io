@@ -1,0 +1,9 @@
+input {
+    &[type=text] {
+        border-radius: 25px;
+        padding: 1rem 3rem;
+        @include small {
+            padding: 1rem 2rem;
+          }
+    }
+}

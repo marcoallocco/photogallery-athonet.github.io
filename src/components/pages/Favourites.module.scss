@@ -1,0 +1,77 @@
+@import "../../scss/vars";
+
+ul {
+    list-style: none;
+  }
+  
+  /* Responsive image gallery rules begin*/
+  
+  .imageGrid {
+    text-align: center;
+    padding: 0;
+  }
+  
+  .imageGrid > li {
+    /* fallback */
+    display: inline-block;
+    width: 350px;
+    margin: 0 5px 10px 5px;
+    /* end fallback */
+    position: relative;
+    cursor: pointer;
+    min-height: 400px;
+    overflow: hidden;
+    @include small {
+      width: calc(90vw - 2rem);
+  }
+  }
+  
+  @supports (display: flex) {
+    .imageGrid {
+      /* display: flex; */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .imageGrid > li.imageItem {
+      flex-basis: 350px; /*width: 350px;*/
+      /* margin: 0; */
+    }
+  
+    .imageGrid::after {
+      content: "";
+      flex-basis: 350px;
+    }
+  }
+  
+  .imageGrid li img {
+    
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 57, 57, 0.502);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.2s 0.1s ease-in-out;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* hover */
+  .imageGrid li:hover .overlay {
+    transform: scale(1);
+  }
+
+  .favFilterList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+.t-blue {
+  color: var(--blue-100);
+}
+.t-orange {
+  color: var(--orange-100);
+}
+.t-red {
+  color: var(--red-100);
+}
+.t-small {
+  font-size: .8rem !important;
+}
+.t-medium {
+  font-size: 1rem !important;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    padding: 0 .5rem;
+  }
+}

@@ -1,0 +1,50 @@
+@import "scss/typo";
+@import "scss/vars";
+@import "fonts/photogallery-v1.0/style.scss";
+@import "scss/flexbox";
+@import "scss/animation";
+@import "scss/responsive";
+@import "scss/ui";
+@import "scss/btn";
+@import "scss/forms";
+@import "scss/loader";
+@import "scss/mansonry";
+@import "scss/favourites";
+@import "scss/modal";
+
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    background-color: white;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  body {
+    margin: 0;
+    text-align: center;
+    color: var(--black-100);
+  }
+
+  main {
+    min-height: 80vh;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+  }
+

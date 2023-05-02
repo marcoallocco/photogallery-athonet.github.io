@@ -1,0 +1,11 @@
+@import "../../scss/vars";
+
+.container {
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 5rem;
+    @include medium {
+        padding: 0 2rem;
+    }
+}

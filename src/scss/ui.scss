@@ -1,0 +1,112 @@
+/* GENERAL UI */
+
+*:focus, *:hover, *:visited {
+  outline: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: var(--black-100);
+}
+a:hover {
+  opacity: .8;
+}
+
+.justify-centyer {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+
+.sm-flex-column {
+  @include small {
+    flex-direction: column; 
+    & > div {
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.md-flex-column {
+  @include medium {
+    flex-direction: column; 
+    & > div {
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.t-left {
+    text-align: left;
+}
+.t-right {
+    text-align: right;
+}
+.t-center {
+    text-align: center;
+}
+
+.row-margin {
+  margin: 3rem 0;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mr-0 {
+  margin-right: 0 !important;
+}
+.ml-0 {
+  margin-left: 0 !important;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+#arrowUpToTop {
+  position: fixed;
+  z-index: 2;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background: #fff url(../dist/img/down-arrow.png) center center no-repeat;
+  padding: 30px;
+  background-size: 35px;
+  border: 1px solid #000;
+  transform: rotate(180deg);
+  border-radius: 50%;
+  display: none;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05) rotate(180deg);
+  }
+  &.showArrow {
+    display: block;
+  }
+  @include medium {
+    right: 5px;
+    bottom: 50px;
+  }
+}
